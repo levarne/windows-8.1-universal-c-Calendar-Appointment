@@ -10,7 +10,7 @@ Add a reference to the project, by browsing your solution, look for the bin/debu
 
 You should be good to go, bottom you will find a sample on how to use it in javascript
 
-
+``` javascript
  function addAppointment()
                 {
                     var newCalendar = new calendarPlug.CalendarSync();
@@ -25,7 +25,7 @@ You should be good to go, bottom you will find a sample on how to use it in java
                         console.log(e);
                     });
                 }            
-
+```
 
 
 NB*** WinRTTimeZones,  package already installed, go into nuget remove this package and add it again, now build the cs project and rebuild your entire 
@@ -39,6 +39,7 @@ because store/winrt apps are handicapped in what they can access in the .Net fra
 
 
 //SIMPLER JAVASCRIPT WAY, BUT YOU CANT CONVERT TIMEZONE WITHOUT LOADING A PLUGIN HAHA
+```C#
  appointment.subject = subtitle;
                 appointment.details = details;
                 appointment.subject = subject;
@@ -56,3 +57,4 @@ because store/winrt apps are handicapped in what they can access in the .Net fra
 added";
                                                                                         }
                                                                                     });
+```
