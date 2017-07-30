@@ -34,27 +34,21 @@ project, then your good to go.
 
 because store/winrt apps are handicapped in what they can access in the .Net frame work.
 
-
-================================================================================================
-
-
-//SIMPLER JAVASCRIPT WAY, BUT YOU CANT CONVERT TIMEZONE WITHOUT LOADING A PLUGIN HAHA
-```C#
+```
  appointment.subject = subtitle;
                 appointment.details = details;
                 appointment.subject = subject;
                 appointment.startTime = appointTime;
 
-                Windows.ApplicationModel.Appointments.AppointmentManager.showAddAppointmentAsync(appointment, rect).done(
-                                                                                    function (appointmentId) {
-                                                                                        if (appointmentId) {
-                                                                                            document.querySelector('#result').innerText = "Appointment Id: " 
-
-+ appointmentId;
-                                                                                        } else {
-                                                                                            document.querySelector('#result').innerText = "Appointment not 
-
-added";
-                                                                                        }
-                                                                                    });
+                Windows.ApplicationModel.
+                        Appointments.
+                        AppointmentManager.
+                        showAddAppointmentAsync(appointment, rect).done(
+                             function (appointmentId) {
+                                   if (appointmentId) {
+                                      document.querySelector('#result').innerText = "Appointment Id: " + appointmentId;
+                                   } else {
+                                      document.querySelector('#result').innerText = "Appointment not added"; 
+                                   }
+                             });
 ```
